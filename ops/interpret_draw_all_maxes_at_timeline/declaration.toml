@@ -1,0 +1,13 @@
+type = "program"
+description = "draw all maxes at graphic with timeline"
+
+[properties]
+module = "file://localhost/$PWD/interpret_draw_all_maxes_at_timeline"
+entrypoint = ["python", "main.py"]
+
+[properties.managers]
+environment = { provider = "miniconda", name = "microseismic" }
+
+[[properties.languages]]
+name = "python"
+version = "3.10"

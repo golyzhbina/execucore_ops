@@ -1,0 +1,15 @@
+type = "program"
+description = " "
+
+[properties]
+module = "file://localhost/$PWD/parsing_load_veldata"
+entrypoint = ["python", "main.py"]
+
+[properties.managers]
+environment = { provider = "miniconda", name = "microseismic" }
+
+
+
+[[properties.languages]]
+name = "python"
+version = "3.10"

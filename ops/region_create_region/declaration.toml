@@ -1,0 +1,14 @@
+type = "program"
+description = " "
+
+[properties]
+module = "file://localhost/$PWD/region_create_region"
+entrypoint = ["python", "main.py"]
+
+[properties.managers]
+environment = { provider = "miniconda", name = "microseismic" }
+
+
+[[properties.languages]]
+name = "python"
+version = "3.10"

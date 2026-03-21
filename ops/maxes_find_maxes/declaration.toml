@@ -1,0 +1,13 @@
+type = "program"
+description = "find maxes"
+
+[properties]
+module = "file://localhost/$PWD/maxes_find_maxes"
+entrypoint = ["python", "main.py"]
+
+[properties.managers]
+environment = { provider = "miniconda", name = "microseismic" }
+
+[[properties.languages]]
+name = "python"
+version = "3.10"

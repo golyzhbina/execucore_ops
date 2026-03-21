@@ -1,0 +1,18 @@
+type = "program"
+description = "add part of traces at the end seismogramms that find all events"
+
+[properties]
+module = "file://localhost/$PWD/traces_hilb_filtration"
+entrypoint = ["python", "main.py"]
+
+[properties.managers]
+environment = { provider = "miniconda", name = "microseismic" }
+
+[[properties.managers.package]]
+provider = "pip"
+dependencies = "file://localhost/$PWD/requirements.txt"
+
+
+[[properties.languages]]
+name = "python"
+version = "3.10"

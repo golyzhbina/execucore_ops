@@ -1,0 +1,14 @@
+type = "program"
+description = "add part of traces at the end seismogramms that find all events"
+
+[properties]
+module = "file://localhost/$PWD/tt_solve_eikonal"
+entrypoint = ["python", "main.py"]
+
+[properties.managers]
+environment = { provider = "miniconda", name = "microseismic" }
+
+
+[[properties.languages]]
+name = "python"
+version = "3.10"

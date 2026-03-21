@@ -1,0 +1,14 @@
+type = "program"
+description = "get cube"
+
+[properties]
+module = "file://localhost/$PWD/cube_getter_with_tm"
+entrypoint = ["python", "main.py"]
+
+[properties.managers]
+environment = { provider = "miniconda", name = "microseismic" }
+
+
+[[properties.languages]]
+name = "python"
+version = "3.10"

@@ -1,0 +1,13 @@
+type = "program"
+description = "read traces"
+
+[properties]
+module = "file://localhost/$PWD/interpret_get_detect_func"
+entrypoint = ["python", "main.py"]
+
+[properties.managers]
+environment = { provider = "miniconda", name = "microseismic" }
+
+[[properties.languages]]
+name = "python"
+version = "3.10"
