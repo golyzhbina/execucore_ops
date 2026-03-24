@@ -5,6 +5,10 @@ description = "add part of traces at the end seismogramms that find all events"
 module = "file://localhost/$PWD/stat_corrs_get_stat_corrs"
 entrypoint = ["python", "main.py"]
 
+[[properties.managers.package]]
+provider = "pip"
+dependencies = "file://localhost/$PWD/requirements.txt"
+
 [properties.managers]
 environment = { provider = "miniconda", name = "microseismic" }
 

@@ -12,6 +12,9 @@ environment = { provider = "miniconda", name = "microseismic" }
 provider = "pip"
 dependencies = "file://localhost/$PWD/requirements.txt"
 
+[[properties.managers.package]]
+provider = "pip"
+dependencies = "file://localhost/$PWD/requirements.txt"
 
 [[properties.languages]]
 name = "python"

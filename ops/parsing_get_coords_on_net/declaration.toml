@@ -8,7 +8,9 @@ entrypoint = ["python", "main.py"]
 [properties.managers]
 environment = { provider = "miniconda", name = "microseismic" }
 
-
+[[properties.managers.package]]
+provider = "pip"
+dependencies = "file://localhost/$PWD/requirements.txt"
 
 [[properties.languages]]
 name = "python"
