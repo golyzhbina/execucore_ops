@@ -35,7 +35,7 @@ from msm_lib.time_calculation import TravelTimeCalculator
 
 esolve_path = load_var_and_data(get_var_path("get_travel_time__esolve_path"))
 rec_coords_path = load_var_and_data(get_var_path("get_travel_time__rec_coords_path"))
-traces_dt = load_var_and_data(get_var_path("get_travel_time__traces_dt"))
+traces_dt = load_var_and_data(get_var_path("get_travel_time__dt"))
 out_var_path = get_var_path("get_travel_time__out")
 out_obj_path = get_obj_path("get_travel_time__out")
 

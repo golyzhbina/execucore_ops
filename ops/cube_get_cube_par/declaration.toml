@@ -1,8 +1,8 @@
 type = "program"
-description = " "
+description = "get cube"
 
 [properties]
-module = "file://localhost/$PWD/parsing_load_veldata"
+module = "file://localhost/$PWD/cube_get_cube_par"
 entrypoint = ["python", "main.py"]
 
 [properties.managers]

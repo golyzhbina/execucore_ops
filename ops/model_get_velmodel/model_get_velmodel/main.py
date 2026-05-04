@@ -36,7 +36,7 @@ from msm_lib.model import ModelCreator
 veldata_path = load_var_and_data(get_var_path("get_velmodel__depths_vel_path"))
 rec_coords_path = load_var_and_data(get_var_path("get_velmodel__rec_coords_path"))
 region_path = load_var_and_data(get_var_path("get_velmodel__region_path"))
-step_vel_model = load_var_and_data(get_var_path("get_velmodel__step_vel_model"))
+step_vel_model = load_var_and_data(get_var_path("get_velmodel__step"))
 out_var_path = get_var_path("get_velmodel__out")
 out_obj_path = get_obj_path("get_velmodel__out")
 

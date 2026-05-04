@@ -34,16 +34,12 @@ def get_obj_path(map_name):
 from msm_lib import load_obj, dump_obj
 from msm_lib.result_interpret import Interpretator
 
-maxes_list_path = load_var_and_data(get_var_path("draw_maxes_at_timeline__maxes_list_path"))
+maxes_path = load_var_and_data(get_var_path("draw_maxes_at_timeline__maxes_path"))
 out_obj_path = get_obj_path("draw_maxes_at_timeline__chart_maxes_at_timeline")
 out_var_path = get_var_path("draw_maxes_at_timeline__chart_maxes_at_timeline")
 
-maxes_list = []
+maxes = load_obj(maxes_path)
 
-for path in maxes_list_path:
-    maxes_list.append(load_obj(path))
-
-
-Interpretator.draw_maxes_at_timeline(maxes_list,
+Interpretator.draw_maxes_at_timeline([maxes],
                          Path(out_obj_path) / "maxes_at_timeline.png")
 

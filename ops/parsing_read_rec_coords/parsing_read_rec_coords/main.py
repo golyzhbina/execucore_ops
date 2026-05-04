@@ -33,7 +33,7 @@ def get_obj_path(map_name):
 from msm_lib import load_obj, dump_obj
 from msm_lib.parsing import ReceiverCoordsHandlerNPY
 
-rc_data_path = load_var_and_data(get_var_path("read_recs__rc_data_path"))
+rc_data_path = load_var_and_data(get_var_path("read_recs__rec_coords_path"))
 out_var_path = get_var_path("read_recs__out")
 out_obj_path = get_obj_path("read_recs__out")
 

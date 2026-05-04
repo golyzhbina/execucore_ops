@@ -33,7 +33,7 @@ def get_obj_path(map_name):
 from msm_lib import load_obj, dump_obj
 from msm_lib.region import RegionCreator
 
-step = load_var_and_data(get_var_path("create_region__step_by_region"))
+step = load_var_and_data(get_var_path("create_region__step"))
 net_coords = load_var_and_data(get_var_path("create_region__net_coords"))
 out_var_path = get_var_path("create_region__out")
 out_obj_path = get_obj_path("create_region__out")

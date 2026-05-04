@@ -28,17 +28,22 @@ def get_var_path(map_name):
 
 def get_obj_path(map_name):
     global map_vars
-    return  f"{HOME}/{map_vars.get(map_name, map_name)}/{map_name}.json"
+    return  f"{HOME}/{map_vars.get(map_name, map_name)}"
+
 
 from msm_lib import load_obj, dump_obj
-from msm_lib.parsing import VelocityLoader
+from msm_lib.result_interpret import Interpretator
 
-veldata_path = load_var_and_data(get_var_path("load_veldata__veldata_path"))
-step_by_depth = load_var_and_data(get_var_path("load_veldata__step_by_depth"))
-out_var_path = get_var_path("load_veldata__out")
-out_obj_path = get_obj_path("load_veldata__out")
+maxes_list_path = load_var_and_data(get_var_path("draw_maxes_at_square__maxes_path"))
+out_obj_path = get_obj_path("draw_maxes_at_square__chart_maxes_at_square")
+out_var_path = get_var_path("draw_maxes_at_square__chart_maxes_at_square")
 
-veldata = VelocityLoader.get_depths_and_speeds(veldata_path, step_by_depth)
-dump_obj(veldata, Path(out_obj_path))
-dump_var_and_data(out_var_path, out_obj_path)
+maxes_list = []
+
+for path in maxes_list_path:
+    maxes_list.append(load_obj(path))
+
+
+Interpretator.draw_maxes_at_square(maxes_list,
+                         Path(out_obj_path) / "maxes_at_square.png")
 
